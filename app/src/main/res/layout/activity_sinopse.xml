@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- POSTER GRANDE -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp">
+
+            <ImageView
+                android:id="@+id/posterImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <!-- DEGRADÊ PRETO -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/poster_gradient" />
+        </FrameLayout>
+
+        <!-- CONTEÚDO -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- TÍTULO -->
+            <TextView
+                android:id="@+id/txtTitulo"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- NOTA -->
+            <TextView
+                android:id="@+id/txtNota"
+                android:textColor="#CCCCCC"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- BOTÃO PLAY -->
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:text="▶ Assistir Trailer"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:backgroundTint="#FFFFFF" />
+
+            <!-- BOTÃO ADICIONAR -->
+            <Button
+                android:id="@+id/btnAddLista"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:text="+ Minha Lista"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#333333" />
+
+            <!-- SINOPSE -->
+            <TextView
+                android:id="@+id/txtSinopse"
+                android:layout_marginTop="20dp"
+                android:textColor="#DDDDDD"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
