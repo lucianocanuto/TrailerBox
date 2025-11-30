@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrailerBox">
         <activity
+            android:name=".ui.MyListActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.SinopseActivity"
             android:exported="false" />
         <activity
