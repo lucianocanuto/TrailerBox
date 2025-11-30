@@ -1,5 +1,6 @@
 package com.btcodans.trailerbox.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Html
 import android.widget.TextView
@@ -30,6 +31,11 @@ class MainActivity : AppCompatActivity() {
                 else -> "Próximas"
             }
         }.attach()
+
+        binding.txtMinhaLista.setOnClickListener {
+            startActivity(Intent(this, MyListActivity::class.java))
+        }
+
 
     }
 }

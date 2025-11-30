@@ -32,7 +32,15 @@ class SinopseActivity : AppCompatActivity() {
         // Dados do filme
         binding.txtTitulo.text = movie.title
         binding.txtSinopse.text = movie.overview
-        binding.txtNota.text = "⭐ ${movie.vote_average}"
+
+// Converte String? para Double de forma segura
+        val nota = movie.vote_average?.toDoubleOrNull() ?: 0.0
+
+// Formata com 1 casa decimal
+        val notaFormatada = String.format("%.1f", nota)
+
+        binding.txtNota.text = "⭐ $notaFormatada"
+
 
         Glide.with(this)
             .load("https://image.tmdb.org/t/p/w500${movie.poster_path}")

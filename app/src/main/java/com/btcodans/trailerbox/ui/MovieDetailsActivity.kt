@@ -16,25 +16,20 @@ class MovieDetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMovieDetailsBinding
     private val repo by lazy { MovieRepository("b10f2c762703b5fb0dcecf42212f083c") }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMovieDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        val movieId = intent.getIntExtra("movieId", -1)
+        val movieId = intent.getIntExtra("movieId", 0)
         val title = intent.getStringExtra("movie_title")
         binding.tvTitle.text = title
 
-
-       // init youtube player lifecycle
+        // YoutubePlayerView observar o lifecycle
         lifecycle.addObserver(binding.youtubePlayerView)
-
 
         if (movieId != -1) loadTrailer(movieId)
     }
-
 
     private fun loadTrailer(movieId: Int) {
         MainScope().launch {
@@ -46,7 +41,7 @@ class MovieDetailsActivity : AppCompatActivity() {
                 }
 
                 yt?.let { video ->
-                    startYoutube(video.key)   // 👉 Usa a função melhor
+                    startYoutube(video.key)
                 }
 
             } catch (e: Exception) {
@@ -57,29 +52,27 @@ class MovieDetailsActivity : AppCompatActivity() {
 
     private fun startYoutube(videoKey: String) {
 
+        // Inicia o vídeo
         binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
             override fun onReady(player: YouTubePlayer) {
                 player.loadVideo(videoKey, 0f)
             }
         })
 
+        // Fullscreen
         binding.youtubePlayerView.addFullscreenListener(object : FullscreenListener {
 
             override fun onEnterFullscreen(fullscreenView: View, exitFullscreen: () -> Unit) {
                 requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
-
                 binding.fullscreenContainer.visibility = View.VISIBLE
                 binding.fullscreenContainer.addView(fullscreenView)
             }
 
             override fun onExitFullscreen() {
                 requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-
                 binding.fullscreenContainer.removeAllViews()
                 binding.fullscreenContainer.visibility = View.GONE
             }
         })
     }
-
-
 }
