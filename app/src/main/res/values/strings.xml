@@ -2,7 +2,7 @@
     <string name="app_name">TrailerBox</string>
     <string name="logo_trailerbox">
     <![CDATA[
-        <font color="#000000">Trailer</font><font color="#FF0000">Box</font>
+        <font color="#00BFFF">Trailer</font><font color="#B00020">Box</font>
     ]]>
 </string>
 

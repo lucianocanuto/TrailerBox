@@ -58,6 +58,7 @@ class SinopseActivity : AppCompatActivity() {
 
             // Atualiza o texto do botão após a ação
             updateButton()
+            finish()
         }
     }
 

@@ -38,11 +38,11 @@
             <!-- TÍTULO -->
             <TextView
                 android:id="@+id/txtTitulo"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
             <!-- NOTA -->
             <TextView
@@ -59,11 +59,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
+                android:backgroundTint="#FFFFFF"
                 android:text="▶ Assistir Trailer"
+                android:textColor="@color/primaria"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:backgroundTint="#FFFFFF" />
+                android:textStyle="bold" />
 
             <!-- BOTÃO ADICIONAR -->
             <Button
@@ -71,20 +71,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="10dp"
+                android:backgroundTint="#333333"
                 android:text="+ Minha Lista"
-                android:textSize="16sp"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="#333333" />
+                android:textColor="@color/primaria"
+                android:textSize="16sp" />
 
             <!-- SINOPSE -->
             <TextView
                 android:id="@+id/txtSinopse"
-                android:layout_marginTop="20dp"
-                android:textColor="#DDDDDD"
-                android:textSize="16sp"
-                android:lineSpacingExtra="4dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/primaria"
+                android:textSize="16sp" />
         </LinearLayout>
 
     </LinearLayout>
