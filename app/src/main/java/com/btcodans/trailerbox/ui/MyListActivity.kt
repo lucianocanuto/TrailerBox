@@ -44,6 +44,11 @@ class MyListActivity : AppCompatActivity() {
 
         binding.recyclerMyList.layoutManager = GridLayoutManager(this, 2)
         binding.recyclerMyList.adapter = adapter
+
+        binding.txtDescobrir.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
     }
 
     override fun onResume() {
