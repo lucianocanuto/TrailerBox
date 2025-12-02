@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.btcodans.trailerbox.R
 import com.btcodans.trailerbox.databinding.ActivityMainBinding
+import com.btcodans.trailerbox.ui.adapters.TrailerPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {

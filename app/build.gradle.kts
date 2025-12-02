@@ -63,7 +63,7 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
-
+    //Player
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:13.0.0")
 
     implementation(libs.androidx.core.ktx)
